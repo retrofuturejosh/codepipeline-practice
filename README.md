@@ -26,32 +26,6 @@ The command below will create the CodePipeline stack. This stack will create the
 To run this command, you will need fill in the parameters in angled brackets.
 
 ```
-aws cloudformation create-stack \
---stack-name <NAME_OF_STACK> \
---template-body file://cloudformation.yml \
---capabilities CAPABILITY_IAM \
---parameters '
-[
-     {
-          "ParameterKey": "GitHubToken",
-          "ParameterValue": "<TOKEN>"
-     },
-     {
-          "ParameterKey": "GitHubRepoOwner",
-          "ParameterValue": "<USERNAME_OR_ORGANIZATION>"
-     },
-     {
-          "ParameterKey": "GitHubRepoName",
-          "ParameterValue": "<REPOSITORY_NAME>"
-     },
-     {
-          "ParameterKey": "GitHubBranch",
-          "ParameterValue": "master"
-     },
-     {
-          "ParameterKey": "S3ArtifactStore",
-          "ParameterValue": "codepipeline-us-east-1-<ACCOUNTID>"
-     }
-]'
+aws cloudformation create-stack --stack-name test-stack --template-body file://cloudformation.yml --capabilities CAPABILITY_IAM --parameters ParameterKey=GitHubToken,ParameterValue=<GitHub Token> ParameterKey=GitHubRepoOwner,ParameterValue=<GitHub Owner> ParameterKey=GitHubRepoName,ParameterValue=<Repo Name> ParameterKey=GitHubBranch,ParameterValue=<Branch Name> ParameterKey=S3ArtifactStore,ParameterValue=codepipeline-<Naming Convention>
 
 ```
