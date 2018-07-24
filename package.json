@@ -1,7 +1,7 @@
 {
   "name": "codepipeline-node",
-  "version": "0.1.0",
-  "description": "Codepipeline test",
+  "version": "0.0.1",
+  "description": "Full CodePipeline Integration for a Dockerized Node Application",
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "test": "mocha",
