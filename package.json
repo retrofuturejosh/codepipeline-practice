@@ -1,0 +1,20 @@
+{
+  "name": "codepipeline-node",
+  "version": "0.1.0",
+  "description": "Codepipeline test",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "mocha",
+    "start": "node src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.2.0",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
+  }
+}
